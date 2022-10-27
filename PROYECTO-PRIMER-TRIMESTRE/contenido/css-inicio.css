@@ -1,8 +1,6 @@
 body{
     background-image: url("fondo.png");
-    background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,6 +8,7 @@ body{
     font-family: fuentePokemon;
     -webkit-text-stroke: 2px #2a75bb;
     color:#ffcb05;
+    min-height: 100%;
 }
 
 button{
