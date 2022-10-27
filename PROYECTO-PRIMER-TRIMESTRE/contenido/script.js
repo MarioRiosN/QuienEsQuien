@@ -105,9 +105,10 @@ function iniciar() {
         }
         caja.appendChild(nodo);
         document.getElementById("tabla").appendChild(caja);
-        document.getElementsByClassName("contenedorPokemon")[i-1].addEventListener("click", mostrarDatos);
+        document.getElementsByClassName("contenedorPokemon")[i-1].addEventListener("click", ventanaFinal);
+        document.getElementsByClassName("contenedorPokemon")[i-1].addEventListener("mouseover", mostrarDatos);
     }
-    seleccion = /*document.getElementsByClassName("pokemon")[70];*/document.getElementsByClassName("pokemon")[parseInt(Math.random() * 151)];
+    seleccion =document.getElementsByClassName("pokemon")[parseInt(Math.random() * 151)];
     botones = document.getElementsByTagName("button");
     for (i = 0; i < botones.length; i++) {
         botones[i].addEventListener("click", boton);
@@ -139,7 +140,7 @@ function boton() {
     }
 }
 
-function mostrarDatos(){
+function ventanaFinal(){
     datos=window.open("infoPokemon.html");
     p1=document.createElement("h1");
     p2=document.createElement("h2");
@@ -151,7 +152,20 @@ function mostrarDatos(){
     datos.document.body.appendChild(p2);
     datos.document.body.appendChild(p3);
 }
-
+function mostrarDatos(){
+    ventanita= document.createElement("div");
+    ventanita.className="datosPokemon";
+    document.getElementById("ventana").appendChild(ventanita);
+    this.addEventListener("mouseout", borrarDatos);
+    document.addEventListener("mousemove", moverDatos);
+}
+function borrarDatos(){
+    document.getElementsByClassName("datosPokemon")[0].remove();
+}
+function moverDatos(e){
+    document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.screenY-72)}px`;
+    document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.screenX+11)}px`;
+}
 function evaluarTipos() {
     if (document.getElementsByClassName("tipos")[0].value == seleccion.getAttribute("tipo1") || document.getElementsByClassName("tipos")[0].value == seleccion.getAttribute("tipo2")) {
         for (i = 0; i < 151; i++) {
