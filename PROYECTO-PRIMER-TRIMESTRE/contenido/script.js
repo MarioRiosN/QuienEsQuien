@@ -103,6 +103,33 @@ function iniciar() {
                 nodo.setAttribute("evo", "3");
                 break;
         }
+        switch(i){
+            case 1: case 2: case 3: case 10: case 11: case 123: case 143:
+                nodo.setAttribute("color", "verde");
+                break;
+            case 4: case 6: case 26: case 37: case 46: case 47: case 58: case 59: case 98: case 99:
+                nodo.setAttribute("color", "naranja");
+                break;
+            case 5:
+                nodo.setAttribute("color", "rojo");
+                break;
+            case 7: case 8: case 9: case 29: case 30: case 31:
+                nodo.setAttribute("color", "azul");
+                break;
+            case 12: case 19: case 23: case 24: case 32: case 33: case 34:
+                nodo.setAttribute("color","morado");
+                break;
+            case 13: case 20: case 21: case 22:
+                nodo.setAttribute("color","marron");
+                break;
+            case 14: case 15: case 25: case 27: case 28:
+                nodo.setAttribute("color","amarillo");
+                break;
+            case 16: case 17: case 18:
+                nodo.setAttribute("color","beige");
+                break;
+            /*Nos quedamos en  Clefairy*/
+        }
         caja.appendChild(nodo);
         document.getElementById("tabla").appendChild(caja);
         document.getElementsByClassName("contenedorPokemon")[i-1].addEventListener("click", ventanaFinal);
@@ -157,14 +184,14 @@ function mostrarDatos(){
     ventanita.className="datosPokemon";
     document.getElementById("ventana").appendChild(ventanita);
     this.addEventListener("mouseout", borrarDatos);
-    document.addEventListener("mousemove", moverDatos);
+    this.addEventListener("mousemove", moverDatos);
 }
 function borrarDatos(){
     document.getElementsByClassName("datosPokemon")[0].remove();
 }
 function moverDatos(e){
-    document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.screenY-72)}px`;
-    document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.screenX+11)}px`;
+    document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.screenY)}px`;
+    document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.screenX)}px`;
 }
 function evaluarTipos() {
     if (document.getElementsByClassName("tipos")[0].value == seleccion.getAttribute("tipo1") || document.getElementsByClassName("tipos")[0].value == seleccion.getAttribute("tipo2")) {
@@ -191,6 +218,7 @@ function evaluarTipos() {
         texto.innerHTML=`No es tipo: ${document.getElementsByClassName("tipos")[0].value}`;
         document.getElementById("pistas").appendChild(texto);
     }
+    document.getElementById(document.getElementsByClassName("tipos")[0].value).remove();
 }
 
 function evaluarEvos(){
@@ -217,4 +245,5 @@ function evaluarEvos(){
         texto.innerHTML=`No es ${document.getElementsByClassName("evos")[0].value}a evo`;
         document.getElementById("pistas").appendChild(texto);
     }
+    document.getElementById(document.getElementsByClassName("evos")[0].value).remove();
 }
