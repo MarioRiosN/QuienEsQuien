@@ -1,5 +1,5 @@
 seleccion = "";
-intentos = 8;
+intentos = 10;
 t= 1;
 window.addEventListener("load", iniciar);
 function iniciar() {
