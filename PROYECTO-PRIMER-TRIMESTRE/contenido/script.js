@@ -137,7 +137,7 @@ function iniciar() {
             /*Nos quedamos en  Clefairy*/
             /*que hacemos con voltorb y electrode¿? los pongo de momento voltorb rojo y el electrode blanco¿? (nº100 y 101)*/ 
             /*He puesto el blanco y beige juntos porque quita de posibles dudas*/
-            /*Hitmonchan (nº107 lo he puesto marrón por su piel, pero puede ser morado)*/
+            /*Hitmonchan (nº107 lo he puesto marrón por su piel(¿moro?), pero puede ser morado)*/
         }
         caja.appendChild(nodo);
         document.getElementById("tabla").appendChild(caja);
