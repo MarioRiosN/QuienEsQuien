@@ -3,7 +3,9 @@ body{
     background-position: center;
     background-size: cover;
     z-index: 0;
+    overflow: hidden;
 }
+
 #ventana{
     width: 100%;
     height: 918px;

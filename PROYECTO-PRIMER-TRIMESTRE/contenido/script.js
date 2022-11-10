@@ -203,8 +203,13 @@ function borrarDatos(){
     document.getElementsByClassName("datosPokemon")[0].remove();
 }
 function moverDatos(e){
-    document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.screenY)}px`;
-    document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.screenX)}px`;
+        /* if(e.clientY+100>window.screen.availHeight){
+            document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.clientY-210)}px`;
+            document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.clientX-210)}px`;
+        }else{ */
+            document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.clientY+13)}px`;
+            document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.clientX+13)}px`;
+    /* } */
 }
 function evaluarTipos() {
     if (document.getElementsByClassName("tipos")[0].value == seleccion.getAttribute("tipo1") || document.getElementsByClassName("tipos")[0].value == seleccion.getAttribute("tipo2")) {
