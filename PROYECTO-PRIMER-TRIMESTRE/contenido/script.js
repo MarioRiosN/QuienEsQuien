@@ -149,6 +149,7 @@ function iniciar() {
     for (i = 0; i < botones.length; i++) {
         botones[i].addEventListener("click", boton);
     }
+    document.getElementById("entrenador").src="TRAINER/"+sessionStorage.getItem("entrenadorSS")+".png";
     crono = document.getElementById("contador");
     repetirCadaSegundo();
 }
