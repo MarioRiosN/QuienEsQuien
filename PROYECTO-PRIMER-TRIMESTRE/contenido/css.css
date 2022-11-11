@@ -112,4 +112,8 @@ body{
     height: 200px;
     background-color: #2a75bb;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

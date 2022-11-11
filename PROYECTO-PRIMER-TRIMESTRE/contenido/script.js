@@ -198,6 +198,29 @@ function mostrarDatos(){
     document.getElementById("ventana").appendChild(ventanita);
     this.addEventListener("mouseout", borrarDatos);
     this.addEventListener("mousemove", moverDatos);
+
+    tipo1 = document.createElement("p");
+    nodo1 = document.createTextNode(`Tipo 1: ${this.children[0].getAttribute("tipo1")}`);
+    tipo1.appendChild(nodo1);
+    document.getElementsByClassName("datosPokemon")[0].appendChild(tipo1);
+
+    if(this.children[0].getAttribute("tipo2")!=null){
+        tipo2 = document.createElement("p");
+        nodo2 = document.createTextNode(`Tipo 2: ${this.children[0].getAttribute("tipo2")}`);
+        tipo2.appendChild(nodo2);
+        document.getElementsByClassName("datosPokemon")[0].appendChild(tipo2);
+    }
+
+    evo = document.createElement("p");
+    nodo3 = document.createTextNode(`Evolución: ${this.children[0].getAttribute("evo")}ª`);
+    evo.appendChild(nodo3);
+    document.getElementsByClassName("datosPokemon")[0].appendChild(evo);
+
+    color = document.createElement("p");
+    nodo4 = document.createTextNode(`Color principal: ${this.children[0].getAttribute("color")}`);
+    color.appendChild(nodo4);
+    document.getElementsByClassName("datosPokemon")[0].appendChild(color);
+    
 }
 function borrarDatos(){
     document.getElementsByClassName("datosPokemon")[0].remove();
@@ -209,6 +232,7 @@ function moverDatos(e){
         }else{ */
             document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.clientY+13)}px`;
             document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.clientX+13)}px`;
+
     /* } */
 }
 function evaluarTipos() {
@@ -219,6 +243,7 @@ function evaluarTipos() {
                 /* document.getElementsByClassName("pokemon")[i].src="4.png"; */
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
             }
         }
         texto=document.createElement("p");
@@ -230,6 +255,7 @@ function evaluarTipos() {
                 /* document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
             }
         }
         texto=document.createElement("p");
@@ -246,6 +272,7 @@ function evaluarEvos(){
                 /* document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
             }
         }
         texto=document.createElement("p");
@@ -257,6 +284,7 @@ function evaluarEvos(){
                /*  document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
                document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
+               document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
             }
         }
         texto=document.createElement("p");
@@ -272,6 +300,7 @@ function evaluarColors(){
             if (document.getElementsByClassName("pokemon")[i].getAttribute("color") != document.getElementsByClassName("colors")[0].value) {
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
             }
         }
         texto=document.createElement("p");
@@ -282,6 +311,7 @@ function evaluarColors(){
             if (document.getElementsByClassName("pokemon")[i].getAttribute("color") == document.getElementsByClassName("colors")[0].value) {
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
             }
         }
         texto=document.createElement("p");
