@@ -107,10 +107,12 @@ body{
 }
 
 .datosPokemon{
+    background-image: url("pokedex.jpg");
+    background-position: center;
+    background-size: cover;
     z-index: 1;
     width: 200px;
-    height: 200px;
-    background-color: #2a75bb;
+    height: 400px;
     position: absolute;
     display: flex;
     align-items: center;

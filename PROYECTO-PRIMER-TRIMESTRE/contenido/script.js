@@ -113,10 +113,10 @@ function iniciar() {
             case 5: case 100: case 124: case 129:
                 nodo.setAttribute("color", "rojo");
                 break;
-            case 7: case 8: case 9: case 29: case 30: case 31: case 41: case 42: case 43: case 44: case 45: case 55: case 60: case 61: case 62: case 72: case 73: case 114: case 116: case 117: case 130: case 131: case 134: case 138: case 139: case 144: case 147: case 148:
+            case 7: case 8: case 9: case 29: case 30: case 31: case 41: case 42: case 43: case 44: case 45: case 55: case 60: case 61: case 62: case 72: case 73: case 114: case 116: case 117: case 130: case 131: case 134: case 138: case 139: case 144: case 148:
                 nodo.setAttribute("color", "azul");
                 break;
-            case 12: case 19: case 23: case 24: case 32: case 33: case 34: case 48: case 49: case 88: case 89: case 90: case 91: case 92: case 93: case 94: case 109: case 110: case 121:
+            case 12: case 19: case 23: case 24: case 32: case 33: case 34: case 48: case 49: case 88: case 89: case 90: case 91: case 92: case 93: case 94: case 109: case 110: case 121: case 147:
                 nodo.setAttribute("color","morado");
                 break;
             case 13: case 20: case 21: case 22: case 50: case 51: case 84: case 85: case 103: case 104: case 105: case 106: case 107: case 115: case 120: case 127: case 128: case 133: case 140: case 141:
