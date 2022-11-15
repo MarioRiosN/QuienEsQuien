@@ -145,6 +145,7 @@ function iniciar() {
         document.getElementsByClassName("contenedorPokemon")[i-1].addEventListener("mouseover", mostrarDatos);
     }
     seleccion =document.getElementsByClassName("pokemon")[parseInt(Math.random() * 151)];
+    sessionStorage.setItem("seleccionSS", seleccion);
     botones = document.getElementsByTagName("button");
     for (i = 0; i < botones.length; i++) {
         botones[i].addEventListener("click", boton);
@@ -226,14 +227,14 @@ function borrarDatos(){
     document.getElementsByClassName("datosPokemon")[0].remove();
 }
 function moverDatos(e){
-        /* if(e.clientY+100>window.screen.availHeight){
-            document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.clientY-210)}px`;
-            document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.clientX-210)}px`;
-        }else{ */
+        if(e.clientY>470){
+            document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.clientY-413)}px`;
+            document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.clientX+13)}px`;
+        }else{ 
             document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.clientY+13)}px`;
             document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.clientX+13)}px`;
 
-    /* } */
+    } 
 }
 function evaluarTipos() {
     if (document.getElementsByClassName("tipos")[0].value == seleccion.getAttribute("tipo1") || document.getElementsByClassName("tipos")[0].value == seleccion.getAttribute("tipo2")) {
@@ -243,8 +244,10 @@ function evaluarTipos() {
                 /* document.getElementsByClassName("pokemon")[i].src="4.png"; */
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
-                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
-                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
+                    document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
+                    document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
+                    document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
+                    document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
             }
         }
         texto=document.createElement("p");
@@ -258,6 +261,8 @@ function evaluarTipos() {
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
             }
         }
         texto=document.createElement("p");
@@ -276,6 +281,8 @@ function evaluarEvos(){
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
             }
         }
         texto=document.createElement("p");
@@ -289,6 +296,8 @@ function evaluarEvos(){
                document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
+               document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
             }
         }
         texto=document.createElement("p");
@@ -306,6 +315,8 @@ function evaluarColors(){
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
             }
         }
         texto=document.createElement("p");
@@ -318,6 +329,8 @@ function evaluarColors(){
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
             }
         }
         texto=document.createElement("p");
