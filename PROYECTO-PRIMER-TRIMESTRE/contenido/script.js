@@ -199,12 +199,18 @@ function mostrarDatos(){
     document.getElementById("ventana").appendChild(ventanita);
     this.addEventListener("mouseout", borrarDatos);
     this.addEventListener("mousemove", moverDatos);
-
+    solapaArriba = document.createElement("img");
+    solapaArriba.setAttribute("src", "pokedexArriba.png");
+    solapaArriba.setAttribute("id","solapaArriba");
+    document.getElementById("ventana").appendChild(solapaArriba);
     tipo1 = document.createElement("p");
     nodo1 = document.createTextNode(`Tipo 1: ${this.children[0].getAttribute("tipo1")}`);
     tipo1.appendChild(nodo1);
     document.getElementsByClassName("datosPokemon")[0].appendChild(tipo1);
-
+    solapaAbajo = document.createElement("img");
+    solapaAbajo.setAttribute("src","pokedexAbajo.png");
+    solapaAbajo.setAttribute("id","solapaAbajo");
+    document.getElementById("ventana").appendChild(solapaAbajo);
     if(this.children[0].getAttribute("tipo2")!=null){
         tipo2 = document.createElement("p");
         nodo2 = document.createTextNode(`Tipo 2: ${this.children[0].getAttribute("tipo2")}`);
@@ -225,15 +231,24 @@ function mostrarDatos(){
 }
 function borrarDatos(){
     document.getElementsByClassName("datosPokemon")[0].remove();
+    document.getElementById("solapaArriba").remove();
+    document.getElementById("solapaAbajo").remove();
 }
 function moverDatos(e){
         if(e.clientY>470){
-            document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.clientY-413)}px`;
+            document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.clientY-287)}px`;
             document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.clientX+13)}px`;
+            document.getElementById("solapaArriba").style.top=`${(e.clientY-287)}px`;
+            document.getElementById("solapaArriba").style.left=`${(e.clientX+13)}px`;
+            document.getElementById("solapaAbajo").style.top=`${(e.clientY-187)}px`;
+            document.getElementById("solapaAbajo").style.left=`${(e.clientX+13)}px`;
         }else{ 
-            document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.clientY+13)}px`;
+            document.getElementsByClassName("datosPokemon")[0].style.top=`${(e.clientY+113)}px`;
             document.getElementsByClassName("datosPokemon")[0].style.left=`${(e.clientX+13)}px`;
-
+            document.getElementById("solapaArriba").style.top=`${(e.clientY+113)}px`;
+            document.getElementById("solapaArriba").style.left=`${(e.clientX+13)}px`;
+            document.getElementById("solapaAbajo").style.top=`${(e.clientY+213)}px`;
+            document.getElementById("solapaAbajo").style.left=`${(e.clientX+13)}px`;
     } 
 }
 function evaluarTipos() {
