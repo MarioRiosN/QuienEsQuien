@@ -107,7 +107,8 @@ body{
 }
 
 .datosPokemon{
-    background-image: url("pokedexCentro.png");
+    /* background-image: url("pokedexCentro.png"); */
+    background-color: skyblue;
     background-position: center;
     background-size: cover;
     z-index: 1;
@@ -118,6 +119,10 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.datosPokemon p{
+    color:white;
+    text-shadow: 0 0 2px black;
 }
 #solapaArriba{
     z-index: 2;

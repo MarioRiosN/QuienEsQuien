@@ -211,6 +211,7 @@ function mostrarDatos(){
     solapaAbajo.setAttribute("src","pokedexAbajo.png");
     solapaAbajo.setAttribute("id","solapaAbajo");
     document.getElementById("ventana").appendChild(solapaAbajo);
+    ventanita.style.backgroundImage="url("+this.children[0].getAttribute("src")+")";
     if(this.children[0].getAttribute("tipo2")!=null){
         tipo2 = document.createElement("p");
         nodo2 = document.createTextNode(`Tipo 2: ${this.children[0].getAttribute("tipo2")}`);
