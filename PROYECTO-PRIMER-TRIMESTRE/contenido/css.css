@@ -89,10 +89,13 @@ body{
 }
 
 #pistas{
+    background-image: url("pokedexCentro.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: Impact;
     -webkit-text-stroke: black;
     color: black;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     width: 90%;
     height: 30%;
     overflow-y: scroll;
@@ -121,8 +124,9 @@ body{
     flex-direction: column;
 }
 .datosPokemon p{
-    color:white;
-    text-shadow: 0 0 2px black;
+    /* text-shadow: 0 0 2px black; */
+    font-family: Impact;
+    backdrop-filter: blur(10px);
 }
 #solapaArriba{
     z-index: 2;
