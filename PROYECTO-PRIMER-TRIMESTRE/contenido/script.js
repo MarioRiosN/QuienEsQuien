@@ -6,6 +6,7 @@ function iniciar() {
     for (i = 1; i <= 151; i++) {
         caja=document.createElement("div");
         caja.setAttribute("class", "contenedorPokemon");
+        caja.setAttribute("id", i);
         nodo = document.createElement("img");
         nombre = `POKEMON/${i}.png`;
         nodo.setAttribute("src", nombre);
@@ -141,11 +142,12 @@ function iniciar() {
         }
         caja.appendChild(nodo);
         document.getElementById("tabla").appendChild(caja);
-        document.getElementsByClassName("contenedorPokemon")[i-1].addEventListener("click", ventanaFinal);
+        document.getElementsByClassName("contenedorPokemon")[i-1].children[0].setAttribute("draggable","true");
+        document.getElementsByClassName("contenedorPokemon")[i-1].children[0].setAttribute("ondragstart","drag(event)");
         document.getElementsByClassName("contenedorPokemon")[i-1].addEventListener("mouseover", mostrarDatos);
     }
     seleccion =document.getElementsByClassName("pokemon")[parseInt(Math.random() * 151)];
-    sessionStorage.setItem("seleccionSS", seleccion);
+    sessionStorage.setItem("seleccionSRC", seleccion.getAttribute("src"));
     botones = document.getElementsByTagName("button");
     for (i = 0; i < botones.length; i++) {
         botones[i].addEventListener("click", boton);
@@ -181,17 +183,9 @@ function boton() {
     }
 }
 
-function ventanaFinal(){
-    datos=window.open("infoPokemon.html");
-    p1=document.createElement("h1");
-    p2=document.createElement("h2");
-    p3=document.createElement("h2");
-    p1.innerHTML="DATOS:";
-    p2.innerHTML=`Tipo: ${this.firstElementChild.getAttribute("tipo1")} ${this.firstElementChild.getAttribute("tipo2")}`;
-    p3.innerHTML=`Evolución: ${this.firstElementChild.getAttribute("evo")}`;
-    datos.document.body.appendChild(p1);
-    datos.document.body.appendChild(p2);
-    datos.document.body.appendChild(p3);
+function ventanaFinal(ev){
+    ev.preventDefault();
+    window.open("infoPokemon.html");
 }
 function mostrarDatos(){
     ventanita= document.createElement("div");
@@ -260,10 +254,10 @@ function evaluarTipos() {
                 /* document.getElementsByClassName("pokemon")[i].src="4.png"; */
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
-                    document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                     document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                     document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
                     document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
+                    document.getElementsByClassName("contenedorPokemon")[i].children[0].setAttribute("draggable","false");
             }
         }
         texto=document.createElement("p");
@@ -275,10 +269,10 @@ function evaluarTipos() {
                 /* document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
-                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].children[0].setAttribute("draggable","false");
             }
         }
         texto=document.createElement("p");
@@ -295,10 +289,10 @@ function evaluarEvos(){
                 /* document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
-                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].children[0].setAttribute("draggable","false");
             }
         }
         texto=document.createElement("p");
@@ -310,10 +304,10 @@ function evaluarEvos(){
                /*  document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
                document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
-               document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].children[0].setAttribute("draggable","false");
             }
         }
         texto=document.createElement("p");
@@ -329,10 +323,10 @@ function evaluarColors(){
             if (document.getElementsByClassName("pokemon")[i].getAttribute("color") != document.getElementsByClassName("colors")[0].value) {
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
-                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].children[0].setAttribute("draggable","false");
             }
         }
         texto=document.createElement("p");
@@ -343,10 +337,10 @@ function evaluarColors(){
             if (document.getElementsByClassName("pokemon")[i].getAttribute("color") == document.getElementsByClassName("colors")[0].value) {
                 document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
-                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("click", ventanaFinal);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mousemove", moverDatos);
+                document.getElementsByClassName("contenedorPokemon")[i].children[0].setAttribute("draggable","false");
             }
         }
         texto=document.createElement("p");
@@ -355,3 +349,12 @@ function evaluarColors(){
     }
     document.getElementById(document.getElementsByClassName("colors")[0].value).remove();
 }
+
+function allowDrop(ev){
+    ev.preventDefault();
+}
+
+function drag(ev){
+    sessionStorage.setItem("respuestaSRC", ev.target.src);
+}
+

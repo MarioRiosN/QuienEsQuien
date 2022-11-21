@@ -6,8 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FINAL</title>
     <link rel="stylesheet" href="cssResultado.css">
+    <script>
+        window.addEventListener("load", iniciar);
+        function iniciar(){
+            respuesta=sessionStorage.getItem("respuestaSRC");
+            seleccion=sessionStorage.getItem("seleccionSRC");
+            nodo1 = document.createElement("img");
+            nodo1.setAttribute("src", respuesta);
+            nodo2 = document.createElement("img");
+            nodo2.setAttribute("src", seleccion);
+            div1.appendChild(nodo1);
+            div2.appendChild(nodo2);
+        }
+    </script>
 </head>
 <body>
-    <h1></h1>
+    <div id="div1">
+
+    </div>
+    <div id="div2">
+
+    </div>
 </body>
 </html>
