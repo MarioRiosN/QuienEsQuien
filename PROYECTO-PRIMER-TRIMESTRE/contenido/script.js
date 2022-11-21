@@ -95,13 +95,13 @@ function iniciar() {
         }
         switch(i){
             case 1: case 4: case 7: case 10: case 13: case 16: case 19: case 21: case 23: case 25: case 27: case 29: case 32: case 35: case 37: case 39: case 41: case 43: case 46: case 48: case 50: case 52: case 54: case 56: case 58: case 60: case 63: case 66: case 69: case 72: case 74: case 77: case 79: case 81: case 83: case 84: case 86: case 88: case 90: case 92: case 95: case 96: case 98: case 100: case 102: case 104: case 106: case 107: case 108: case 109: case 111: case 113: case 114: case 115: case 116: case 118: case 120: case 122: case 123: case 124: case 125: case 126: case 127: case 128: case 129: case 131: case 132: case 133: case 137: case 138: case 140: case 142: case 143: case 144: case 145: case 146: case 147: case 150: case 151:
-                nodo.setAttribute("evo", "1");
+                nodo.setAttribute("evo", "primera");
                 break;
             case 2: case 5: case 8: case 11: case 14: case 17: case 20: case 22: case 24: case 26: case 28: case 30: case 33: case 36: case 38: case 40: case 42: case 44: case 47: case 49: case 51: case 53: case 55: case 57: case 59: case 61: case 64: case 67: case 70: case 73: case 75: case 78: case 80: case 82: case 85: case 87: case 89: case 91: case 93: case 97: case 99: case 101: case 103: case 105: case 110: case 112: case 117: case 119: case 121: case 130: case 134: case 135: case 136: case 139: case 141: case 148:
-                nodo.setAttribute("evo", "2");
+                nodo.setAttribute("evo", "segunda");
                 break;
             default:
-                nodo.setAttribute("evo", "3");
+                nodo.setAttribute("evo", "tercera");
                 break;
         }
         switch(i){
@@ -296,7 +296,7 @@ function evaluarEvos(){
             }
         }
         texto=document.createElement("p");
-        texto.innerHTML=`Es ${document.getElementsByClassName("evos")[0].value}a evo`;
+        texto.innerHTML=`Es ${document.getElementsByClassName("evos")[0].value} evo`;
         document.getElementById("pistas").appendChild(texto);
     }else{
         for(i = 0; i < 151; i++){
@@ -311,7 +311,7 @@ function evaluarEvos(){
             }
         }
         texto=document.createElement("p");
-        texto.innerHTML=`No es ${document.getElementsByClassName("evos")[0].value}a evo`;
+        texto.innerHTML=`No es ${document.getElementsByClassName("evos")[0].value} evo`;
         document.getElementById("pistas").appendChild(texto);
     }
     document.getElementById(document.getElementsByClassName("evos")[0].value).remove();
