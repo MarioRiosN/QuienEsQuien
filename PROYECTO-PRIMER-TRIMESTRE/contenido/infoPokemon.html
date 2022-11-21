@@ -12,7 +12,7 @@
             respuesta=sessionStorage.getItem("respuestaSRC");
             seleccion=sessionStorage.getItem("seleccionSRC");
             nodo1 = document.createElement("img");
-            nodo1.setAttribute("src", "pokibol.png");
+            nodo1.setAttribute("src", "pokibolX.png");
             nodo1.setAttribute("draggable", "true");
             nodo1.setAttribute("ondragstart", "drag(event)");
             nodo2 = document.createElement("img");
@@ -22,7 +22,7 @@
             divPokibola.appendChild(nodo1);
             divPokemones.appendChild(nodo2);
             nodo3 = document.createElement("img");
-            nodo3.setAttribute("src", "TRAINER/"+sessionStorage.getItem("entrenadorSS")+".png");
+            nodo3.setAttribute("src", "TRAINERX/"+sessionStorage.getItem("entrenadorSS")+".png");
             divTrainer.appendChild(nodo3);
         }
 
@@ -36,7 +36,7 @@
         function drop(ev){
             document.getElementById("divPokibola").style.visibility="hidden";
             if("POKEMON/"+respuesta+".png" == seleccion){
-                document.getElementById("divPokemones").children[0].src="pokibol.png";
+                document.getElementById("divPokemones").children[0].src="pokibolX.png";
                 document.getElementById("textoDelResultado").children[0].innerText="HAS ACERTADO!!!!!!!!!!!";
             }else{
                 document.getElementById("textoDelResultado").children[0].innerText="ESE NO ERA!!!!!!!!!!!";
