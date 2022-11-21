@@ -12,20 +12,23 @@
             respuesta=sessionStorage.getItem("respuestaSRC");
             seleccion=sessionStorage.getItem("seleccionSRC");
             nodo1 = document.createElement("img");
-            nodo1.setAttribute("src", respuesta);
+            nodo1.setAttribute("src", "pokibol.png");
             nodo2 = document.createElement("img");
-            nodo2.setAttribute("src", seleccion);
-            div1.appendChild(nodo1);
-            div2.appendChild(nodo2);
+            nodo2.setAttribute("src", respuesta);
+            divPokibola.appendChild(nodo1);
+            divPokemones.appendChild(nodo2);
+            nodo3 = document.createElement("img");
+            nodo3.setAttribute("src", "TRAINER/"+sessionStorage.getItem("entrenadorSS")+".png");
+            divTrainer.appendChild(nodo3);
         }
     </script>
 </head>
 <body>
-    <div id="div1">
-
-    </div>
-    <div id="div2">
-
+    <div id="textoDelResultado"><h1>LANZA LA POKIBOLA!!!!!!!!!!!!!!!!!!!</h1></div>
+    <div id="lasFotos">
+        <div id="divTrainer"></div>
+        <div id="divPokibola"></div>
+        <div id="divPokemones"></div>
     </div>
 </body>
 </html>
