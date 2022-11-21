@@ -185,7 +185,7 @@ function boton() {
 
 function ventanaFinal(ev){
     ev.preventDefault();
-    window.open("infoPokemon.html");
+    window.open("infoPokemon.html", "_self");
 }
 function mostrarDatos(){
     ventanita= document.createElement("div");
@@ -355,6 +355,6 @@ function allowDrop(ev){
 }
 
 function drag(ev){
-    sessionStorage.setItem("respuestaSRC", ev.target.src);
+    sessionStorage.setItem("respuestaSRC", ev.target.parentNode.id);
 }
 
