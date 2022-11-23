@@ -1,0 +1,11 @@
+-PÁGINA DE INICIO:
+Al iniciar el juego, aparece una pantalla de inicio, con radio buttons para elegir tu avatar. Y un botón para empezar.
+
+-PÁGINA PRINCIPAL:
+En la página principal del juego, hay dos zonas a tener en cuenta. La de la izquierda, contiene todos los pokemon posibles.
+La zona de la derecha contiene: Tu avatar, un temporizador, el contador de preguntas restantes, el formulario con el que poder hacer estas últimas,
+un cuadro en el que aparecerá la información de las preguntas ya hechas para no tener que recordarlas y la zona en la que dropear tu respuesta.
+
+-PÁGINA FINAL:
+Al elegir una respuesta, aparece esta página final, la cual te dirá si has acertado o has perdido. El objetivo es hacerla más llamativa usando drag and drop y
+alguna animación para que no salga simplemente el resultado final y hacer el juego más interactivo.
