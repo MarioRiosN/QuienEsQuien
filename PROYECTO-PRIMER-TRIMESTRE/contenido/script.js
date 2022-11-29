@@ -165,7 +165,7 @@ function iniciar() {
             case 72: case 73: case 86: case 87: case 90: case 91: case 116: case 117: case 120: case 121: case 131: case 138: case 139: case 140: case 141:
                 nodo.setAttribute("habitat", "agua salada");
                 break;
-            case 144: case 145: case 146: case 150: case 151;
+            case 144: case 145: case 146: case 150: case 151:
                 nodo.setAttribute("habitat", "raro");
                 break;
             
