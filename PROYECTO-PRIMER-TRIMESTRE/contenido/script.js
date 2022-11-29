@@ -204,6 +204,9 @@ function boton() {
         case "colors":
             evaluarColors();
             break;
+        case "habitats":
+            evaluarHabitats();
+            break;
     }
     intentos--;
     document.getElementById("intentos").innerHTML=`TE QUEDAN ${intentos} PREGUNTAS`;
