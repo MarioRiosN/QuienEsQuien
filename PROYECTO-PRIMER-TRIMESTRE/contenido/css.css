@@ -330,6 +330,7 @@
     .datosPokemon p{
         /* text-shadow: 0 0 2px black; */
         font-family: Impact;
+        font-size: small;
         backdrop-filter: blur(10px);
     }
     #solapaArriba{
