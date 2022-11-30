@@ -1,3 +1,6 @@
+*{
+    cursor: url('cursor.png'), auto;
+}
 body{
     background-image: url("fondo.png");
     background-size: cover;

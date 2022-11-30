@@ -1,4 +1,7 @@
 @media (max-width: 1199px){
+    *{
+        cursor: url('cursor.png'), auto;
+    }
     body{
         /* background-image: url("fondo.png");
         background-size: cover;
@@ -187,6 +190,9 @@
     }
 }
 @media (min-width: 1200px){
+    *{
+        cursor: url('cursor.png'), auto;
+    }
     body{
         /* background-image: url("fondo.png");
         background-size: cover;
