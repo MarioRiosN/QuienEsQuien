@@ -177,7 +177,7 @@ function iniciar() {
         document.getElementsByClassName("contenedorPokemon")[i-1].addEventListener("mouseover", mostrarDatos);
     }
     seleccion =document.getElementsByClassName("pokemon")[parseInt(Math.random() * 151)];
-    sessionStorage.setItem("seleccionSRC", seleccion.getAttribute("src"));
+    sessionStorage.setItem("seleccionSRC", seleccion.getAttribute("src").substr(8,1));
     botones = document.getElementsByTagName("button");
     for (i = 0; i < botones.length; i++) {
         botones[i].addEventListener("click", boton);
@@ -218,6 +218,8 @@ function boton() {
 
 function ventanaFinal(ev){
     ev.preventDefault();
+    sessionStorage.setItem("preguntasRestantes", intentos);
+    sessionStorage.setItem("tiempoJuego", t);
     window.open("infoPokemon.html", "_self");
 }
 function mostrarDatos(){

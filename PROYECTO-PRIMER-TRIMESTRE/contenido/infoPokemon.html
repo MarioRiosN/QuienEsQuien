@@ -22,17 +22,15 @@
             divPokibola.appendChild(nodo1);
             divPokemones.appendChild(nodo2);
             nodo3 = document.createElement("img");
-            nodo3.setAttribute("src", "TRAINERX/"+sessionStorage.getItem("entrenadorSS")+".png");
+            nodo3.setAttribute("src", "TRAINER_ESPALDA/"+sessionStorage.getItem("entrenadorSS")+".png");
             divTrainer.appendChild(nodo3);
         }
-
         function allowDrop(ev){
             ev.preventDefault();
         }
 
         function drag(ev){
         }
-
         function drop(ev){
             document.getElementById("divPokibola").style.visibility="hidden";
             if("POKEMON/"+respuesta+".png" == seleccion){

@@ -16,7 +16,7 @@
                 sessionStorage.setItem("entrenadorSS", "x");
             }
             if(document.getElementById("cuadroNombre").value.trim() != ""){
-                localStorage.setItem("nombrePlayer", document.getElementById("cuadroNombre").value);
+                sessionStorage.setItem("nombrePlayer", document.getElementById("cuadroNombre").value);
                 window.open("contenido/main.html","_self");
             }else{
                 alert("Pon tu nombre");
