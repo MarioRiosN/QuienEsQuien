@@ -42,11 +42,16 @@
                 document.getElementById("textoDelResultado").children[0].innerText="ESE NO ERA!!!!!!!!!!!";
                 document.getElementById("divPokemones").children[0].src=seleccion;
             }
+            document.getElementById("botonRank").style.visibility = "visible";
+        }
+
+        function rankear(){
+            window.open("ranking.html", "_blank");
         }
     </script>
 </head>
 <body>
-    <div id="textoDelResultado"><h1>LANZA LA POKIBOLA!!!!!!!!!!!!!!!!!!!</h1></div>
+    <div id="textoDelResultado"><h1>LANZA LA POKIBOLA!!!!!!!!!!!!!!!!!!!</h1><button onclick=rankear() id="botonRank">RANKING</button></div>
     <div id="lasFotos">
         <div id="divTrainer"></div>
         <div id="divPokibola"></div>
