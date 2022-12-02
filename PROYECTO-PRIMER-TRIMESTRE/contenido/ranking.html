@@ -5,8 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RANKING</title>
+    <script>
+        window.addEventListener("load", iniciar);
+        function iniciar(){
+            contador=localStorage.getItem("contador");
+            if(sessionStorage.getItem("respuestaSRC") == sessionStorage.getItem("seleccionSRC")){
+                contador++;
+                localStorage.setItem("contador",contador);
+                localStorage.setItem("player"+contador,sessionStorage.getItem("nombrePlayer")+"--"+sessionStorage.getItem("preguntasRestantes")+"--"+sessionStorage.getItem("tiempoJuego"));
+            }
+            for(i=1;i<=contador;i++){
+                    player=document.createElement("h3");
+                    nodo = document.createTextNode(localStorage.getItem("player"+i));
+                    player.appendChild(nodo);
+                    document.getElementById("ranking").appendChild(player);
+                }
+        }
+    </script>
+    <style>
+        *{
+        cursor: url('cursor.png'), auto;
+        }
+        body{
+            background: url("fondo.png") no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #ranking{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: #ffcb05;
+        }
+
+        #ranking h1,h2,h3{
+            background-color: #2a75bb;
+            border-radius: 50%;
+        }
+
+        h3{
+            width: 50%;
+            align-self: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="ranking">
+        <h1>RANKING</h1>
+        <h2>NOMBRE----PREGUNTAS RESTANTES----TIEMPO</h2>
+    </div>
 </body>
 </html>

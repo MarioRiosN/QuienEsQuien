@@ -7,6 +7,14 @@
     <title>¿Quién es quién?</title>
     <link rel="stylesheet" href="contenido/css-inicio.css">
     <script>
+        window.addEventListener("load",iniciar);
+        function iniciar(){
+            if(localStorage.getItem("datosPlayers") == null){
+                datosPlayers= new Array();
+                localStorage.setItem("datosPlayers", datosPlayers)
+                localStorage.setItem("contador",0);
+            }
+        }
         function empezar(){
             if(document.getElementById("radio1").checked){
                 sessionStorage.setItem("entrenadorSS", Math.trunc(Math.random()*11+1));
@@ -20,7 +28,7 @@
                 window.open("contenido/main.html","_self");
             }else{
                 alert("Pon tu nombre");
-            }   
+            }  
         }
     </script>
 </head>
