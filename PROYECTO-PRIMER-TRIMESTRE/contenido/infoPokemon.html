@@ -33,16 +33,15 @@
         }
         function drop(ev){
             document.getElementById("divPokibola").style.visibility="hidden";
-            if("POKEMON/"+respuesta+".png" == seleccion){
+            if(respuesta == seleccion){
                 document.getElementById("divPokemones").children[0].src="pokibolX.png";
                 document.getElementById("textoDelResultado").children[0].innerText="HAS ACERTADO!!!!!!!!!!!";
             }else{
                 document.getElementById("textoDelResultado").children[0].innerText="ESE NO ERA!!!!!!!!!!!";
-                document.getElementById("divPokemones").children[0].src=seleccion;
+                document.getElementById("divPokemones").children[0].src="gifPokemon/"+seleccion+".webp";
             }
             document.getElementById("botonRank").style.visibility = "visible";
         }
-
         function rankear(){
             window.open("ranking.html", "_blank");
         }
