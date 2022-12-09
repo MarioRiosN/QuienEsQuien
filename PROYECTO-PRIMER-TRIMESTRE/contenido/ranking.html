@@ -22,10 +22,21 @@
                 ranking.sort();
                 ranking.reverse();
             for(i=0;i<ranking.length;i++){
-                    player=document.createElement("h3");
-                    nodo = document.createTextNode(ranking[i]);
-                    player.appendChild(nodo);
-                    document.getElementById("ranking").appendChild(player);
+                    player=document.createElement("tr");
+                    spliteado=ranking[i].split("--");
+                    nomb=document.createElement("td");
+                    nodo=document.createTextNode(spliteado[2]);
+                    preg=document.createElement("td");
+                    nodo2=document.createTextNode(spliteado[0]);
+                    tiem=document.createElement("td");
+                    nodo3=document.createTextNode(spliteado[1]);
+                    nomb.appendChild(nodo);
+                    preg.appendChild(nodo2);
+                    tiem.appendChild(nodo3);
+                    player.appendChild(nomb);
+                    player.appendChild(preg);
+                    player.appendChild(tiem);
+                    document.getElementById("ranking").children[0].appendChild(player);
                 }
         }
         function creditear(){
@@ -52,9 +63,9 @@
             width: 80%;
             display: flex;
             justify-content: center;
-            flex-direction: column;
             text-align: center;
             color: #ffcb05;
+            flex-direction: column;
         }
 
         #ranking :is(h1,h2,h3){
@@ -74,17 +85,15 @@
     </style>
 </head>
 <body>
-    <div id="ranking">
-        <!-- <table>
-            <ul>RANKING</ul>
-            <ul>
-                <li>PREGUNTAS RESTANTES</li>
-                <li>TIEMPO</li>
-                <li>NOMBRE</li>
-            </ul>
-        </table> -->
-        <h1>RANKING</h1>
-        <h2>PREGUNTAS RESTANTES----TIEMPO----NOMBRE</h2>
+    <div>
+        <h3>RANKING</h3>
+        <table id="ranking">
+            <tr>
+                <th>NOMBRE</th>
+                <th>PREGUNTAS RESTANTES</th>
+                <th>TIEMPO</th>
+            </tr>
+        </table>
     </div>
     <button onclick="creditear()">CRÉDITOS</button>
 </body>
