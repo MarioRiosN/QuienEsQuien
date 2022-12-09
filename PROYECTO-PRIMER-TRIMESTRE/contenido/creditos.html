@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+            background-color: black;
+            font-family: Impact;
+            color: #ffcb05;
+        }
+        h2{
+            text-align: center;
+            margin: 0 0 60px 0;
+            font-size: 5rem;
+        }
+        p{
+            font-size: 3rem;
+            line-height: 6rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #creditos{
+            width: 1080px;
+            height: 1200px;
+            text-align: justify;
+            letter-spacing: 1.5px;
+            padding: 40px;
+            transform: perspective(250px) rotateX(14deg);
+            margin: 0 auto;
+            animation: credits 40s linear infinite;
+        }
+
+        @keyframes credits{
+            0%{transform: perspective(250px) rotateX(14deg) translateY(1400px);
+            opacity: 1;
+            }
+            70%{
+                opacity: 0.5;
+            }
+            100%{transform: perspective(250px) rotateX(14deg) translateY(-1000px);
+            opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="creditos">
+        <h2>AGRADECIMIENTOS</h2>
+        <p>
+            Mario y Álvaro queremos agradecer a todas las personas que han colaborado
+            en el desarrollo del juego.
+        </p>
+        <p>
+            Jorge "Dictador" González<br>
+            Alejandro "Jugón" Cañueto<br>
+            David "El poeta" Espinosa<br>
+            Carlos "El bueno" Jiménez<br>
+            Raquel "Satisfier" Gómez<br>
+            Eduardo "Dudu" Santaella<br>
+            Ahmed "Francés" Ech-Charyfy<br>
+            Susana "Creative Commons" López<br>
+            Carlos "Francés impostor" Aliane
+        </p>
+        <p>
+            Gracias a tod@s, sin vosotros esto no hubiese sido lo mismo =)
+        </p>
+    </div>
+</body>
+</html>

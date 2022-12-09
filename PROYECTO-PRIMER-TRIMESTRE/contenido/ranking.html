@@ -39,7 +39,7 @@
         }
 
         #ranking{
-            width: 50%;
+            width: 80%;
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -47,7 +47,7 @@
             color: #ffcb05;
         }
 
-        #ranking h1,h2,h3{
+        #ranking :is(h1,h2,h3){
             background-color: #2a75bb;
             border-radius: 50%;
         }
@@ -56,12 +56,23 @@
             width: 50%;
             align-self: center;
         }
+        button{
+            width: 10%;
+            margin-left: 5%;
+            -webkit-text-stroke: 2px #2a75bb;
+        }
     </style>
+    <script>
+        function creditear(){
+            window.open("creditos.html", "_blank");
+        }
+    </script>
 </head>
 <body>
     <div id="ranking">
         <h1>RANKING</h1>
         <h2>NOMBRE----PREGUNTAS RESTANTES----TIEMPO</h2>
     </div>
+    <button onclick="creditear()">CRÉDITOS</button>
 </body>
 </html>
