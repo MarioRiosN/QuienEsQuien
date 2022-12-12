@@ -1,12 +1,12 @@
 @media (max-width: 1199px){
     *{
-        cursor: url('multi/cursor.png'), auto;
+        cursor: url('../multi/cursor.png'), auto;
     }
     body{
         /* background-image: url("fondo.png");
         background-size: cover;
         background-repeat: no-repeat; */
-        background: url("multi/fondo.png") no-repeat center center fixed; 
+        background: url("../multi/fondo.png") no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -76,7 +76,7 @@
     }
     @font-face {
         font-family: fuentePokemon;
-        src: url(Pokemon\ Solid.ttf);
+        src: url(../Pokemon\ Solid.ttf);
     }
     .contenedorPokemon{
         width: 90px;
@@ -104,7 +104,7 @@
         width: 100%;
     }
     #pistas{
-        background-image: url("multi/pokedexCentro.png");
+        background-image: url("../multi/pokedexCentro.png");
         background-size: cover;
         background-repeat: no-repeat;
         font-family: Impact;
@@ -179,7 +179,7 @@
         width: 150px;
         height: 150px;
         backdrop-filter: blur(10px);
-        background-image: url("multi/pokibol.png");
+        background-image: url("../multi/pokibol.png");
         background-position: center;
         background-size: cover;
         font-family: Impact;
@@ -192,13 +192,13 @@
 }
 @media (min-width: 1200px){
     *{
-        cursor: url('multi/cursor.png'), auto;
+        cursor: url('../multi/cursor.png'), auto;
     }
     body{
         /* background-image: url("fondo.png");
         background-size: cover;
         background-repeat: no-repeat; */
-        background: url("multi/fondo.png") no-repeat center center fixed; 
+        background: url("../multi/fondo.png") no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -281,7 +281,7 @@
     }
     @font-face {
         font-family: fuentePokemon;
-        src: url(Pokemon\ Solid.ttf);
+        src: url(../Pokemon\ Solid.ttf);
     }
     .contenedorPokemon{
         width: 90px;
@@ -311,7 +311,7 @@
         align-items: center;
     }
     #pistas{
-        background-image: url("multi/pokedexCentro.png");
+        background-image: url("../multi/pokedexCentro.png");
         background-size: cover;
         background-repeat: no-repeat;
         font-family: Impact;
@@ -386,7 +386,7 @@
         /* width: 150px;
         height: 150px; */
         backdrop-filter: blur(10px);
-        background-image: url("multi/pokibol.png");
+        background-image: url("../multi/pokibol.png");
         background-position: center;
         background-size:100%;
         background-repeat: no-repeat;

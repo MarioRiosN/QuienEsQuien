@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cssRanking.css">
     <title>RANKING</title>
     <script>
         window.addEventListener("load", iniciar);
@@ -54,67 +55,9 @@
             }
         }
     </script>
-    <style>
-        *{
-        cursor: url('multi/cursor.png'), auto;
-        }
-        body{
-            background: url("multi/fondo.png") no-repeat center center fixed; 
-            background-size: cover;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #ranking{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            color: #ffcb05;
-            flex-direction: column;
-            font-size: xx-large;
-        }
-
-        #ranking :is(h1,h2,h3){
-            background-color: #2a75bb;
-            border-radius: 50%;
-        }
-        button{
-            width: fit-content;
-            margin-left: 5%;
-            -webkit-text-stroke: 2px #2a75bb;
-        }
-        table{
-            border-collapse: collapse;
-        }
-        table :is(th,td){
-            width: 10%;
-            border: 2px;
-            border-color: black;
-            border-style: solid;
-            background-color: #2a75bb;
-            caption-side: top;
-        }
-        #tablita{
-            width: 80%;
-        }
-        #cosas{
-            width: 20%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        #cosas img{
-            width: 25%;
-            margin-top: 5%;
-        }
-    </style>
 </head>
 <body>
-    <audio id="audio">
+    <audio id="audio" loop>
         <source src="multi/ranking.mp3" type="audio/mpeg">
     </audio>
     <div id="tablita">

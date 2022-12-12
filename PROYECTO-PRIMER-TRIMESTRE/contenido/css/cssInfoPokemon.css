@@ -1,8 +1,8 @@
 *{
-    cursor: url('multi/cursor.png'), auto;
+    cursor: url('../multi/cursor.png'), auto;
 }
 body{
-    background-image: url("multi/fondo.png");
+    background-image: url("../multi/fondo.png");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 0;
@@ -21,7 +21,7 @@ body{
 }
 @font-face {
     font-family: fuentePokemon;
-    src: url(Pokemon\ Solid.ttf);
+    src: url(../Pokemon\ Solid.ttf);
 }
 
 #textoDelResultado{

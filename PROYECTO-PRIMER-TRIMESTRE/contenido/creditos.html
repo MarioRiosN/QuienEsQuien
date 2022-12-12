@@ -4,60 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cssCreditos.css">
     <title>CRÉDITOS</title>
-    <style>
-        body{
-            overflow: hidden;
-            background-color: black;
-            font-family: Impact;
-            color: #ffcb05;
-        }
-        h2{
-            text-align: center;
-            margin: 0 0 60px 0;
-            font-size: 5rem;
-        }
-        p{
-            font-size: 3rem;
-            line-height: 6rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        #creditos{
-            width: 1080px;
-            height: 1200px;
-            text-align: justify;
-            letter-spacing: 1.5px;
-            padding: 40px;
-            transform: perspective(150px) rotateX(14deg);
-            margin: 0 auto;
-            animation: credits 40s linear infinite;
-        }
-        @keyframes credits{
-            0%{transform: perspective(150px) rotateX(14deg) translateY(1000px);
-            opacity: 1;
-            }
-            70%{
-                opacity: 0.5;
-            }
-            100%{transform: perspective(150px) rotateX(14deg) translateY(-1000px);
-            opacity: 0;
-            }
-        }
-        #caja{
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 2;
-        }
-        img{
-            position: fixed;
-            top: 1px;
-            right: 1px;
-            width: 12%;
-            height: 24%;
-        }
-    </style>
     <script>
         function volumen(){
             if(document.getElementsByTagName("img")[0].getAttribute("class") == "1"){
@@ -73,7 +21,7 @@
     </script>
 </head>
 <body>
-    <audio id="audio">
+    <audio id="audio" loop>
         <source src="multi/credits.wav" type="audio/wav">
     </audio>
     <div id="creditos">
