@@ -33,7 +33,6 @@
             margin: 0 auto;
             animation: credits 40s linear infinite;
         }
-
         @keyframes credits{
             0%{transform: perspective(150px) rotateX(14deg) translateY(1000px);
             opacity: 1;
@@ -45,9 +44,38 @@
             opacity: 0;
             }
         }
+        #caja{
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+        img{
+            position: fixed;
+            top: 1px;
+            right: 1px;
+            width: 12%;
+            height: 24%;
+        }
     </style>
+    <script>
+        function volumen(){
+            if(document.getElementsByTagName("img")[0].getAttribute("class") == "1"){
+                document.getElementsByTagName("img")[0].setAttribute("class", "2");
+                document.getElementsByTagName("img")[0].src = "multi/mute.png";
+                document.getElementById("audio").play();
+            }else{
+                document.getElementsByTagName("img")[0].setAttribute("class", "1");
+                document.getElementsByTagName("img")[0].src = "multi/volume.png";
+                document.getElementById("audio").pause();
+            }
+        }
+    </script>
 </head>
 <body>
+    <audio id="audio">
+        <source src="multi/credits.wav" type="audio/wav">
+    </audio>
     <div id="creditos">
         <h2>AGRADECIMIENTOS</h2>
         <p>
@@ -64,14 +92,11 @@
             Ahmed "Francés" Ech-Charyfy<br>
             Susana "Creative Commons" López<br>
             Carlos "Francés impostor" Aliane<br>
-            <!-- https://pkmn.net/<br>
-            https://play.pokemonshowdown.com/sprites/trainers/credits/<br>
-            https://archives.bulbagarden.net/wiki/Category:Trainer_back_sprites<br>
-            https://www.clipartmax.com/<br> -->
         </p>
         <p>
             Gracias a tod@s, sin vosotros esto no hubiese sido lo mismo =)
         </p>
     </div>
+    <div id="caja"><img class="1" src="multi/volume.png" onclick="volumen()"></div>
 </body>
 </html>

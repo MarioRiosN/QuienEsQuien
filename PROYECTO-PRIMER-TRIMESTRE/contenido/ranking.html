@@ -42,6 +42,17 @@
         function creditear(){
             window.open("creditos.html", "_blank");
         }
+        function volumen(){
+            if(document.getElementsByTagName("img")[0].getAttribute("class") == "1"){
+                document.getElementsByTagName("img")[0].setAttribute("class", "2");
+                document.getElementsByTagName("img")[0].src = "multi/mute.png";
+                document.getElementById("audio").play();
+            }else{
+                document.getElementsByTagName("img")[0].setAttribute("class", "1");
+                document.getElementsByTagName("img")[0].src = "multi/volume.png";
+                document.getElementById("audio").pause();
+            }
+        }
     </script>
     <style>
         *{
@@ -49,9 +60,6 @@
         }
         body{
             background: url("multi/fondo.png") no-repeat center center fixed; 
-           /*  -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover; */
             background-size: cover;
             z-index: 0;
             display: flex;
@@ -89,10 +97,27 @@
             background-color: #2a75bb;
             caption-side: top;
         }
+        #tablita{
+            width: 80%;
+        }
+        #cosas{
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #cosas img{
+            width: 25%;
+            margin-top: 5%;
+        }
     </style>
 </head>
 <body>
-    <div>
+    <audio id="audio">
+        <source src="multi/ranking.mp3" type="audio/mpeg">
+    </audio>
+    <div id="tablita">
         <table id="ranking">
             <caption>RANKING</caption>
             <tr>
@@ -102,6 +127,6 @@
             </tr>
         </table>
     </div>
-    <button onclick="creditear()">CRÉDITOS</button>
+    <div id="cosas"><button onclick="creditear()">CRÉDITOS</button><img class="1" src="multi/volume.png" onclick="volumen()"></div>
 </body>
 </html>
