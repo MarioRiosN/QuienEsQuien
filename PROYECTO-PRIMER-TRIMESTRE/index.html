@@ -30,10 +30,25 @@
                 alert("Pon tu nombre");
             }  
         }
+
+        function volumen(){
+            if(document.getElementsByTagName("img")[0].getAttribute("class") == "1"){
+                document.getElementsByTagName("img")[0].setAttribute("class", "2");
+                document.getElementsByTagName("img")[0].src = "contenido/multi/mute.png";
+                document.getElementById("audio").play();
+            }else{
+                document.getElementsByTagName("img")[0].setAttribute("class", "1");
+                document.getElementsByTagName("img")[0].src = "contenido/multi/volume.png";
+                document.getElementById("audio").pause();
+            }
+        }
     </script>
 </head>
 <body>
-    <h1>QUIEN ES QUIEN POKEMON</h1>
+    <audio id="audio">
+        <source src="contenido/multi/inicio.wav" type="audio/wav">
+    </audio>
+    <div id="primera_linea"><h1>QUIEN ES QUIEN POKEMON</h1><img class="1" src="contenido/multi/volume.png" onclick="volumen()"></div>
     <h2>ELIGE TU ENTRENADOR</h2>
     <div id="botones"><label for="radio1">CHICO: </label><input name="entrenador" id="radio1" type="radio"><label for="radio2">    CHICA: </label><input name="entrenador" id="radio2" type="radio"><label for="radio3">    OTRO: </label><input name="entrenador" id="radio3" type="radio" checked></div>
     <br>

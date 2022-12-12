@@ -2,9 +2,6 @@
     cursor: url('multi/cursor.png'), auto;
 }
 body{
-    /* background-image: url("fondo.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat; */
     background: url("multi/fondo.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -32,4 +29,21 @@ button{
 @font-face {
     font-family: fuentePokemon;
     src: url(Pokemon\ Solid.ttf);
+}
+
+#primera_linea{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#primera_linea h1{
+    align-self: center;
+}
+img{
+    align-self: center;
+    justify-self: flex-end;
+    width: 3%;
+    margin-left: 1%;
 }
