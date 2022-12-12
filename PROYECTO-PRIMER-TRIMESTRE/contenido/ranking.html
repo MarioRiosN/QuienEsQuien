@@ -36,7 +36,7 @@
                     player.appendChild(nomb);
                     player.appendChild(preg);
                     player.appendChild(tiem);
-                    document.getElementById("ranking").children[0].appendChild(player);
+                    document.getElementById("ranking").children[1].appendChild(player);
                 }
         }
         function creditear(){
@@ -49,9 +49,9 @@
         }
         body{
             background: url("fondo.png") no-repeat center center fixed; 
-            -webkit-background-size: cover;
+           /*  -webkit-background-size: cover;
             -moz-background-size: cover;
-            -o-background-size: cover;
+            -o-background-size: cover; */
             background-size: cover;
             z-index: 0;
             display: flex;
@@ -60,34 +60,41 @@
         }
 
         #ranking{
-            width: 80%;
+            width: 100%;
             display: flex;
             justify-content: center;
             text-align: center;
             color: #ffcb05;
             flex-direction: column;
+            font-size: xx-large;
         }
 
         #ranking :is(h1,h2,h3){
             background-color: #2a75bb;
             border-radius: 50%;
         }
-
-        h3{
-            width: 50%;
-            align-self: center;
-        }
         button{
-            width: 10%;
+            width: fit-content;
             margin-left: 5%;
             -webkit-text-stroke: 2px #2a75bb;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        table :is(th,td){
+            width: 10%;
+            border: 2px;
+            border-color: black;
+            border-style: solid;
+            background-color: #2a75bb;
+            caption-side: top;
         }
     </style>
 </head>
 <body>
     <div>
-        <h3>RANKING</h3>
         <table id="ranking">
+            <caption>RANKING</caption>
             <tr>
                 <th>NOMBRE</th>
                 <th>PREGUNTAS RESTANTES</th>
