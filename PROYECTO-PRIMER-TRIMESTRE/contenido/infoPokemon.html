@@ -36,24 +36,55 @@
             if(respuesta == seleccion){
                 document.getElementById("divPokemones").children[0].src="multi/pokibolX.png";
                 document.getElementById("textoDelResultado").children[0].innerText="HAS ACERTADO!!!!!!!!!!!";
+                document.getElementById("audio").pause();
+                document.getElementById("victoria").play();
             }else{
                 document.getElementById("textoDelResultado").children[0].innerText="ESE NO ERA!!!!!!!!!!!";
                 document.getElementById("divPokemones").children[0].src="gifPokemon/"+seleccion+".webp";
+                document.getElementById("audio").pause();
+                document.getElementById("derrota").play();
             }
             document.getElementById("botonRank").style.visibility = "visible";
         }
         function rankear(){
             window.open("ranking.html", "_blank");
         }
+
+        function volumen(){
+            if(document.getElementsByTagName("img")[3].getAttribute("class") == "1"){
+                document.getElementsByTagName("img")[3].setAttribute("class", "2");
+                document.getElementsByTagName("img")[3].src = "multi/mute.png";
+                document.getElementById("audio").play();
+            }else{
+                document.getElementsByTagName("img")[3].setAttribute("class", "1");
+                document.getElementsByTagName("img")[3].src = "multi/volume.png";
+                document.getElementById("audio").pause();
+            }
+        }
     </script>
 </head>
 <body>
-    <div id="textoDelResultado"><h1>LANZA LA POKIBOLA!!!!!!!!!!!!!!!!!!!</h1><button onclick=rankear() id="botonRank">RANKING</button></div>
+    <audio id="audio" loop>
+        <source src="multi/pokeball.wav" type="audio/wav">
+    </audio>
+    <audio id="victoria">
+        <source src="multi/victoria.wav" type="audio/wav">
+    </audio>
+    <audio id="derrota">
+        <source src="multi/derrota.wav" type="audio/wav">
+    </audio>
+    <div id="todo">
+    <div id="textoDelResultado">
+        <h1>LANZA LA POKIBOLA!!!!!!!!!!!!!!!!!!!</h1>
+        <button onclick=rankear() id="botonRank">RANKING</button>
+    </div>
     <div id="lasFotos">
         <div id="divTrainer"></div>
         <div id="divPokibola"></div>
         <div id="divPokemones"></div>
     </div>
+    </div>
+    <img id="sonido" class="1" src="multi/volume.png" onclick="volumen()">
     <video class="fondoVideo" muted autoplay loop>
         <source src="multi/fondete.mp4" type="video/mp4">
     </video>

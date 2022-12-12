@@ -10,7 +10,11 @@ body{
     font-family: fuentePokemon;
     -webkit-text-stroke: 2px #2a75bb;
     color:#ffcb05;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#todo{
+    width: 95%;
     height: 918px;
     display: flex;
     flex-direction: column;
@@ -79,4 +83,8 @@ body{
     width: auto;
     height: auto;
     z-index: -1;
+}
+#sonido{
+    width: 5%;
+    height: 10%;
 }
