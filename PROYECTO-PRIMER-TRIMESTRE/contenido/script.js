@@ -229,7 +229,7 @@ function mostrarDatos(){
     this.addEventListener("mouseout", borrarDatos);
     this.addEventListener("mousemove", moverDatos);
     solapaArriba = document.createElement("img");
-    solapaArriba.setAttribute("src", "pokedexArriba.png");
+    solapaArriba.setAttribute("src", "multi/pokedexArriba.png");
     solapaArriba.setAttribute("id","solapaArriba");
     document.getElementById("ventana").appendChild(solapaArriba);
     tipo1 = document.createElement("p");
@@ -237,7 +237,7 @@ function mostrarDatos(){
     tipo1.appendChild(nodo1);
     document.getElementsByClassName("datosPokemon")[0].appendChild(tipo1);
     solapaAbajo = document.createElement("img");
-    solapaAbajo.setAttribute("src","pokedexAbajo.png");
+    solapaAbajo.setAttribute("src","multi/pokedexAbajo.png");
     solapaAbajo.setAttribute("id","solapaAbajo");
     document.getElementById("ventana").appendChild(solapaAbajo);
     ventanita.style.backgroundImage="url("+this.children[0].getAttribute("src")+")";
@@ -290,9 +290,7 @@ function evaluarTipos() {
     if (document.getElementsByClassName("tipos")[0].value == seleccion.getAttribute("tipo1") || document.getElementsByClassName("tipos")[0].value == seleccion.getAttribute("tipo2")) {
         for (i = 0; i < 151; i++) {
             if (document.getElementsByClassName("pokemon")[i].getAttribute("tipo1") != document.getElementsByClassName("tipos")[0].value && document.getElementsByClassName("pokemon")[i].getAttribute("tipo2") != document.getElementsByClassName("tipos")[0].value) {
-                /* document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
-                /* document.getElementsByClassName("pokemon")[i].src="4.png"; */
-                document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
+                document.getElementsByClassName("pokemon")[i].src="multi/pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                     document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                     document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
@@ -306,8 +304,7 @@ function evaluarTipos() {
     }else{
         for (i = 0; i < 151; i++) {
             if (document.getElementsByClassName("pokemon")[i].getAttribute("tipo1") == document.getElementsByClassName("tipos")[0].value || document.getElementsByClassName("pokemon")[i].getAttribute("tipo2") == document.getElementsByClassName("tipos")[0].value) {
-                /* document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
-                document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
+                document.getElementsByClassName("pokemon")[i].src="multi/pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
@@ -327,7 +324,7 @@ function evaluarEvos(){
         for(i = 0; i < 151; i++){
             if(document.getElementsByClassName("pokemon")[i].getAttribute("evo") != document.getElementsByClassName("evos")[0].value){
                 /* document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
-                document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
+                document.getElementsByClassName("pokemon")[i].src="multi/pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
@@ -342,7 +339,7 @@ function evaluarEvos(){
         for(i = 0; i < 151; i++){
             if(document.getElementsByClassName("pokemon")[i].getAttribute("evo") == document.getElementsByClassName("evos")[0].value){
                /*  document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
-               document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
+               document.getElementsByClassName("pokemon")[i].src="multi/pokibol.PNG";
                document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
@@ -361,7 +358,7 @@ function evaluarColors(){
     if (document.getElementsByClassName("colors")[0].value == seleccion.getAttribute("color")){
         for (i = 0; i < 151; i++) {
             if (document.getElementsByClassName("pokemon")[i].getAttribute("color") != document.getElementsByClassName("colors")[0].value) {
-                document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
+                document.getElementsByClassName("pokemon")[i].src="multi/pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
@@ -375,7 +372,7 @@ function evaluarColors(){
     }else{
         for (i = 0; i < 151; i++) {
             if (document.getElementsByClassName("pokemon")[i].getAttribute("color") == document.getElementsByClassName("colors")[0].value) {
-                document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
+                document.getElementsByClassName("pokemon")[i].src="multi/pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
@@ -394,7 +391,7 @@ function evaluarHabitats(){
     if (document.getElementsByClassName("habitats")[0].value == seleccion.getAttribute("habitat")){
         for (i = 0; i < 151; i++) {
             if (document.getElementsByClassName("pokemon")[i].getAttribute("habitat") != document.getElementsByClassName("habitats")[0].value) {
-                document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
+                document.getElementsByClassName("pokemon")[i].src="multi/pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);
@@ -408,7 +405,7 @@ function evaluarHabitats(){
     }else{
         for (i = 0; i < 151; i++) {
             if (document.getElementsByClassName("pokemon")[i].getAttribute("habitat") == document.getElementsByClassName("habitats")[0].value) {
-                document.getElementsByClassName("pokemon")[i].src="pokibol.PNG";
+                document.getElementsByClassName("pokemon")[i].src="multi/pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseout", borrarDatos);

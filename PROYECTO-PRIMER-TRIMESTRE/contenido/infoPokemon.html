@@ -12,7 +12,7 @@
             respuesta=sessionStorage.getItem("respuestaSRC");
             seleccion=sessionStorage.getItem("seleccionSRC");
             nodo1 = document.createElement("img");
-            nodo1.setAttribute("src", "pokibolX.png");
+            nodo1.setAttribute("src", "multi/pokibolX.png");
             nodo1.setAttribute("draggable", "true");
             nodo1.setAttribute("ondragstart", "drag(event)");
             nodo2 = document.createElement("img");
@@ -34,7 +34,7 @@
         function drop(ev){
             document.getElementById("divPokibola").style.visibility="hidden";
             if(respuesta == seleccion){
-                document.getElementById("divPokemones").children[0].src="pokibolX.png";
+                document.getElementById("divPokemones").children[0].src="multi/pokibolX.png";
                 document.getElementById("textoDelResultado").children[0].innerText="HAS ACERTADO!!!!!!!!!!!";
             }else{
                 document.getElementById("textoDelResultado").children[0].innerText="ESE NO ERA!!!!!!!!!!!";
@@ -55,7 +55,7 @@
         <div id="divPokemones"></div>
     </div>
     <video class="fondoVideo" muted autoplay loop>
-        <source src="fondete.mp4" type="video/mp4">
+        <source src="multi/fondete.mp4" type="video/mp4">
     </video>
 </body>
 </html>
