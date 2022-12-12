@@ -255,8 +255,19 @@
     #entrenador{
         height: 100%;
     }
+    #sonido{
+        width: 19%;
+        height: 99%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #sonido img{
+        width: 100%;
+        height: 80%;
+    }
     #contador{
-        width: 49%;
+        width: 30%;
         height: 99%;
         font-family: Impact;
         -webkit-text-stroke: black;

@@ -428,3 +428,15 @@ function drag(ev){
     sessionStorage.setItem("respuestaSRC", ev.target.parentNode.id);
 }
 
+function volumen(){
+    if(document.getElementsByTagName("img")[152].getAttribute("class") == "1"){
+        document.getElementsByTagName("img")[152].setAttribute("class", "2");
+        document.getElementsByTagName("img")[152].src = "multi/mute.png";
+        document.getElementById("audio").play();
+    }else{
+        document.getElementsByTagName("img")[152].setAttribute("class", "1");
+        document.getElementsByTagName("img")[152].src = "multi/volume.png";
+        document.getElementById("audio").pause();
+    }
+}
+

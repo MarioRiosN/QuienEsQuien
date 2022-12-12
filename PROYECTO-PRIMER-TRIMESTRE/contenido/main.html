@@ -9,11 +9,15 @@
     <script src="script.js"></script>
 </head>
 <body>
+<audio id="audio" loop>
+    <source src="multi/partida.mp3" type="audio/mpeg">
+</audio>
 <div id="ventana">
     <div id="tabla"></div>
     <div id="formulario">
         <div id="trainerYcontador">
             <div id="trainer"><img id="entrenador"></div>
+            <div id="sonido"><img class="1" src="multi/volume.png" onclick="volumen()"></div>
             <div id="contador"></div>
         </div>
         <h1 id="tituloh1">PREGUNTAS</h1>
