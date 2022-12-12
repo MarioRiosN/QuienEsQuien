@@ -3,16 +3,12 @@
         cursor: url('../multi/cursor.png'), auto;
     }
     body{
-        /* background-image: url("fondo.png");
-        background-size: cover;
-        background-repeat: no-repeat; */
         background: url("../multi/fondo.png") no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         z-index: 0;
-        /* overflow: hidden; */
     }
 
     #ventana{
@@ -29,7 +25,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        /*Tenemos que mirar que se adapte a la pantalla porque no lo hace*/
     }
     #formulario{
         width: 100%;
@@ -54,12 +49,9 @@
         width: 49%;
         height: 99%;
         display: flex;
- /*        align-items: center; */
         justify-content: center;
     }
     #entrenador{
-        /* max-width: 100%;
-        max-height: 100%; */
     }
     #contador{
         width: 49%;
@@ -68,7 +60,6 @@
         -webkit-text-stroke: black;
         color: black;
         display: flex;
-        /* align-items: center; */
         justify-content: center;
     }
     #tituloh1{
@@ -110,9 +101,7 @@
         font-family: Impact;
         -webkit-text-stroke: black;
         color: black;
-        /* background-color: antiquewhite; */
         width: 50%;
-        /* height: 30%; */
         overflow-y: scroll;
     }
     #pistas p{
@@ -125,7 +114,6 @@
     }
 
     .datosPokemon{
-        /* background-image: url("pokedexCentro.png"); */
         background-color: skyblue;
         background-position: center;
         background-size: cover;
@@ -139,7 +127,6 @@
         flex-direction: column;
     }
     .datosPokemon p{
-        /* text-shadow: 0 0 2px black; */
         font-family: Impact;
         font-size: small;
         backdrop-filter: blur(10px);
@@ -195,9 +182,6 @@
         cursor: url('../multi/cursor.png'), auto;
     }
     body{
-        /* background-image: url("fondo.png");
-        background-size: cover;
-        background-repeat: no-repeat; */
         background: url("../multi/fondo.png") no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -223,7 +207,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        /*Tenemos que mirar que se adapte a la pantalla porque no lo hace*/
         overflow-y:scroll;
     }
     #formulario{
@@ -317,7 +300,6 @@
         font-family: Impact;
         -webkit-text-stroke: black;
         color: black;
-        /* background-color: antiquewhite; */
         width: 90%;
         height: 50%;
         overflow-y: scroll;
@@ -332,7 +314,6 @@
     }
 
     .datosPokemon{
-        /* background-image: url("pokedexCentro.png"); */
         background-color: skyblue;
         background-position: center;
         background-size: cover;
@@ -346,7 +327,6 @@
         flex-direction: column;
     }
     .datosPokemon p{
-        /* text-shadow: 0 0 2px black; */
         font-family: Impact;
         font-size: small;
         backdrop-filter: blur(10px);
@@ -383,8 +363,6 @@
 
     #resolver{
         margin-top: 10px;
-        /* width: 150px;
-        height: 150px; */
         backdrop-filter: blur(10px);
         background-image: url("../multi/pokibol.png");
         background-position: center;

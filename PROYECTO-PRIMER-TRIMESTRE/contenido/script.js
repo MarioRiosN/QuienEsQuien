@@ -135,10 +135,6 @@ function iniciar() {
             case 66: case 67: case 68: case 74: case 75: case 76: case 81: case 82: case 95: case 111: case 112: case 142: case 150:
                 nodo.setAttribute("color","gris");
                 break;
-            /*Nos quedamos en  Clefairy*/
-            /*que hacemos con voltorb y electrode¿? los pongo de momento voltorb rojo y el electrode blanco¿? (nº100 y 101)*/ 
-            /*He puesto el blanco y beige juntos porque quita de posibles dudas*/
-            /*Hitmonchan (nº107 lo he puesto marrón por su piel(¿moro?), pero puede ser morado)*/
         }
         switch(i){
             case 1: case 2: case 3: case 19: case 20: case 23: case 24: case 29: case 30: case 31: case 32: case 33: case 34: case 37: case 38: case 39: case 40: case 43: case 44: case 45: case 58: case 59: case 77: case 78: case 83: case 84: case 85: case 96: case 97: case 108: case 114: case 115: case 123: case 125: case 128:
@@ -323,7 +319,6 @@ function evaluarEvos(){
     if(document.getElementsByClassName("evos")[0].value == seleccion.getAttribute("evo")){
         for(i = 0; i < 151; i++){
             if(document.getElementsByClassName("pokemon")[i].getAttribute("evo") != document.getElementsByClassName("evos")[0].value){
-                /* document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
                 document.getElementsByClassName("pokemon")[i].src="multi/pokibol.PNG";
                 document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                 document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
@@ -338,7 +333,6 @@ function evaluarEvos(){
     }else{
         for(i = 0; i < 151; i++){
             if(document.getElementsByClassName("pokemon")[i].getAttribute("evo") == document.getElementsByClassName("evos")[0].value){
-               /*  document.getElementsByClassName("pokemon")[i].style.filter="brightness(0)"; */
                document.getElementsByClassName("pokemon")[i].src="multi/pokibol.PNG";
                document.getElementsByClassName("pokemon")[i].style.animation="guardar 2s";
                document.getElementsByClassName("contenedorPokemon")[i].removeEventListener("mouseover", mostrarDatos);
